@@ -9,7 +9,9 @@ import { getAllTweets, getIsActive, getRefresh } from '../redux/tweetSlice';
 
 const CreatePost = () => {
     const [description, setDescription] = useState("");
-    
+    const { user } = useSelector(store => store.user);
+    const {isActive} = useSelector(store=>store.tweet);
+    const dispatch = useDispatch();
 
     
 
