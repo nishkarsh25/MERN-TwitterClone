@@ -11,7 +11,11 @@ const Home = () => {
   const { user, otherUsers } = useSelector(store => store.user);
   const navigate = useNavigate();
 
-  
+  useEffect(()=>{
+    if (!user) {
+      navigate("/login");
+    }
+  },[]);
   
 
   
