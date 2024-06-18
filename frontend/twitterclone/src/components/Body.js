@@ -5,5 +5,8 @@ import Home from './Home';
 import Feed from './Feed';
 import Profile from './Profile';
 
-
+const Body = () => {
+    
+    
+}
 
