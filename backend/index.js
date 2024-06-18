@@ -6,7 +6,11 @@ import userRoute from "./routes/userRoute.js";
 import tweetRoute from "./routes/tweetRoute.js";
 import cors from "cors";
 
-
+dotenv.config({
+    path:".env"
+})
+databaseConnection();
+const app = express(); 
 
 
 
