@@ -39,3 +39,4 @@ const useGetMyTweets = (id) => {
         }
     }, [isActive,refresh]);
 };
+export default useGetMyTweets;
