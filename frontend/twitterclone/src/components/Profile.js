@@ -10,5 +10,14 @@ import toast from "react-hot-toast"
 import { followingUpdate } from '../redux/userSlice';
 import { getRefresh } from '../redux/tweetSlice';
 
+const Profile = () => {
+    const { user, profile } = useSelector(store => store.user);
+    const { id } = useParams();
+    useGetProfile(id);
+    const dispatch = useDispatch();
 
+    
+
+    
+}
 
