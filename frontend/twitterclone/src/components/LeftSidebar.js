@@ -13,4 +13,13 @@ import toast from "react-hot-toast"
 import { getMyProfile, getOtherUsers, getUser } from '../redux/userSlice';
  
 
+const LeftSidebar = () => {
+
+    const {user} = useSelector(store=>store.user);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    
+
+    
+}
 
