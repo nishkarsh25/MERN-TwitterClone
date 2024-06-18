@@ -92,3 +92,4 @@ const Tweet = ({ tweet }) => {
     )
 }
 
+export default Tweet
