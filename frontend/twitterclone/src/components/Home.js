@@ -16,7 +16,9 @@ const Home = () => {
       navigate("/login");
     }
   },[]);
-  
+  // custom Hook
+  useOtherUsers(user?._id);
+  useGetMyTweets(user?._id);
 
   
 }
