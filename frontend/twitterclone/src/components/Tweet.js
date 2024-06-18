@@ -15,7 +15,20 @@ const Tweet = ({ tweet }) => {
     const { user } = useSelector(store => store.user); 
      
     const dispatch = useDispatch();
-    
+    const likeOrDislikeHandler = async (id) => {
+        try {
+            const res = await axios.put(`${TWEET_API_END_POINT}/like/${id}`, { id: user?._id }, {
+                withCredentials: true
+            })
+            console.log(res);
+            dispatch(getRefresh());
+            toast.success(res.data.message);
+
+        } catch (error) {
+            toast.success(error.response.data.message);
+            console.log(error);
+        }
+    }
     
     
 }
