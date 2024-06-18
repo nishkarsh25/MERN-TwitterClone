@@ -21,3 +21,4 @@ const useOtherUsers = (id) => {
         fetchOtherUsers();
     },[]);
 };
+export default useOtherUsers;
