@@ -6,7 +6,26 @@ import Feed from './Feed';
 import Profile from './Profile';
 
 const Body = () => {
-    
+    const appRouter = createBrowserRouter([
+        {
+            path: "/",
+            element: <Home/>,
+            children:[
+                {
+                    path:"/",
+                    element:<Feed/>
+                },
+                {
+                    path:"/profile/:id",
+                    element:<Profile/>
+                }
+            ]
+        },
+        {
+            path: "/login",
+            element: <Login />
+        }
+    ])
     
 }
 
