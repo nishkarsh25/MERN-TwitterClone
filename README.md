@@ -21,9 +21,9 @@ This is a Twitter clone project built using the MERN (MongoDB, Express.js, React
 
 - **Responsive Design**: Optimized for various screen sizes using responsive design principles.
 
-## Live Demo
+<!-- ## Live Demo -->
 
-You can try out the live demo of the app [here](https://mern-netflixclone-1.onrender.com).
+<!-- You can try out the live demo of the app [here](https://mern-netflixclone-1.onrender.com). -->
 
 ## Folder Structure
 
@@ -68,6 +68,9 @@ project-root/
 ## GIF's
 
 <img src="https://github.com/nishkarsh25/MERN-TwitterClone/blob/main/Screenshots/ss1.gif" alt="Screenshot 1" width="1000"> 
+
+<img src="https://github.com/nishkarsh25/MERN-TwitterClone/blob/main/Screenshots/ss2.gif" alt="Screenshot 1" width="1000"> 
+
 
 ## Technologies Used
 
