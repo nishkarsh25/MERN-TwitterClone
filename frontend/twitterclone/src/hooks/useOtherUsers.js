@@ -4,4 +4,7 @@ import { useEffect } from "react";
 import {useDispatch} from "react-redux";
 import { getMyProfile, getOtherUsers } from "../redux/userSlice";
 
-
+const useOtherUsers = (id) => {
+    
+    
+};
