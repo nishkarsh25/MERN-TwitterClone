@@ -20,7 +20,10 @@ const persistConfig = {
     storage,
   }
 
-
+const rootReducer = combineReducers({
+    user:userSlice,
+    tweet:tweetSlice,
+})
 
 
 
