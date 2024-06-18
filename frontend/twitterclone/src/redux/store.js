@@ -24,7 +24,7 @@ const rootReducer = combineReducers({
     user:userSlice,
     tweet:tweetSlice,
 })
-
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 
 
