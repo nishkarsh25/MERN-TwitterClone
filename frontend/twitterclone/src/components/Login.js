@@ -15,7 +15,45 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    if (isLogin) {
+      // login
+      try {
+        const res = await axios.post(`${USER_API_END_POINT}/login`, { email, password }, {
+          headers: {
+            'Content-Type': "application/json"
+          },
+          withCredentials: true
+        }); 
+        dispatch(getUser(res?.data?.user));
+        if(res.data.success){
+          navigate("/");
+          toast.success(res.data.message);
+        }
+      } catch (error) {
+        toast.success(error.response.data.message);
+        console.log(error);
+      }
+    } else {
+      // signup
+      try {
+        const res = await axios.post(`${USER_API_END_POINT}/register`, { name, username, email, password }, {
+          headers: {
+            'Content-Type': "application/json"
+          },
+          withCredentials: true
+        }); 
+        if(res.data.success){
+          setIsLogin(true);
+          toast.success(res.data.message);
+        }
+      } catch (error) {
+        toast.success(error.response.data.message);
+        console.log(error);
+      }
+    }
+  }
 
 
   
