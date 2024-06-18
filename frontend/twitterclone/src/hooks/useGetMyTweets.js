@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllTweets } from "../redux/tweetSlice";
 
 const useGetMyTweets = (id) => {
-    
+    const dispatch = useDispatch();
+    const { refresh, isActive } = useSelector(store => store.tweet);
     
 
     
