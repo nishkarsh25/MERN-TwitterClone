@@ -31,6 +31,7 @@ const userSlice = createSlice({
         }
     }
 });
-
+export const {getUser, getOtherUsers,getMyProfile,followingUpdate} = userSlice.actions;
+export default userSlice.reducer;
 
 
