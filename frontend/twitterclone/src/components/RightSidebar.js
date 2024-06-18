@@ -43,3 +43,4 @@ const RightSidebar = ({ otherUsers }) => {
   )
 }
 
+export default RightSidebar
