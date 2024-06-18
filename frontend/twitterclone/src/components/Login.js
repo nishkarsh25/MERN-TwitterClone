@@ -6,5 +6,15 @@ import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import { getUser } from '../redux/userSlice';
 
+const Login = () => {
+  
+  
 
+  
+
+
+  
+
+  
+}
 
