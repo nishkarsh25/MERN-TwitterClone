@@ -152,6 +152,7 @@ export const follow = async(req,res)=>{
         console.log(error);
     }
 }
+
 export const unfollow = async (req,res) => {
     try {
         const loggedInUserId = req.body.id; 
