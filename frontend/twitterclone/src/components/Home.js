@@ -7,5 +7,13 @@ import { useSelector } from "react-redux";
 import useGetMyTweets from '../hooks/useGetMyTweets';
 
 
+const Home = () => {
+  const { user, otherUsers } = useSelector(store => store.user);
+  const navigate = useNavigate();
 
+  
+  
+
+  
+}
 
