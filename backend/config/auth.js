@@ -4,4 +4,6 @@ dotenv.config({
     path:"../config/.env"
 })
 
-
+const isAuthenticated = async (req,res,next) => {
+    
+}
