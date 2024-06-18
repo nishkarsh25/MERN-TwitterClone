@@ -7,8 +7,13 @@ import {useDispatch} from "react-redux";
 import { getUser } from '../redux/userSlice';
 
 const Login = () => {
-  
-  
+  const [isLogin, setIsLogin] = useState(true);
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   
 
