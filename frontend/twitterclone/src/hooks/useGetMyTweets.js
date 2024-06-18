@@ -4,4 +4,12 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllTweets } from "../redux/tweetSlice";
 
+const useGetMyTweets = (id) => {
+    
+    
 
+    
+    
+
+    
+};
