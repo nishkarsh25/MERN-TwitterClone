@@ -75,6 +75,7 @@ export const getAllTweets = async (req,res) => {
         console.log(error);
     }
 }
+
 export const getFollowingTweets = async (req,res) =>{
     try {
         const id = req.params.id;
