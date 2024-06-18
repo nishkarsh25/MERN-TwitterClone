@@ -20,6 +20,12 @@ const Home = () => {
   useOtherUsers(user?._id);
   useGetMyTweets(user?._id);
 
-  
+  return (
+    <div className='flex justify-between w-[80%] mx-auto'>
+      <LeftSidebar />
+      <Outlet />
+      <RightSidebar otherUsers={otherUsers} />
+    </div>
+  )
 }
 
