@@ -7,5 +7,15 @@ import toast from "react-hot-toast"
 import { useSelector, useDispatch } from "react-redux";
 import { getAllTweets, getIsActive, getRefresh } from '../redux/tweetSlice';
 
+const CreatePost = () => {
+    const [description, setDescription] = useState("");
+    
 
+    
+
+    
+    
+
+    
+}
 
