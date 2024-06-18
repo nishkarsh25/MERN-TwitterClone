@@ -29,7 +29,18 @@ const Tweet = ({ tweet }) => {
             console.log(error);
         }
     }
-    
+    const deleteTweetHandler = async (id) => {
+        try {
+            axios.defaults.withCredentials = true;
+            const res = await axios.delete(`${TWEET_API_END_POINT}/delete/${id}`);
+            console.log(res);
+            dispatch(getRefresh());
+            toast.success(res.data.message);
+        } catch (error) {
+            toast.success(error.response.data.message);
+            console.log(error);
+        }
+    }
     
 }
 
