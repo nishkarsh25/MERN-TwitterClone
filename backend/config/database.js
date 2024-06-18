@@ -10,3 +10,4 @@ const databaseConnection = () => {
         console.log(error);
     })
 }
+export default databaseConnection;
