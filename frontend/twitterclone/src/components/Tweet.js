@@ -11,5 +11,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { getRefresh } from '../redux/tweetSlice';
 import { format } from "timeago.js";
 
-
+const Tweet = ({ tweet }) => {
+    const { user } = useSelector(store => store.user); 
+     
+    const dispatch = useDispatch();
+    
+    
+    
+}
 
