@@ -16,7 +16,36 @@ const Profile = () => {
     useGetProfile(id);
     const dispatch = useDispatch();
 
-    
+    const followAndUnfollowHandler = async () => {
+        if(user.following.includes(id)){
+            // unfollow
+            try {
+                axios.defaults.withCredentials = true;
+                const res = await axios.post(`${USER_API_END_POINT}/unfollow/${id}`, {id:user?._id});
+                console.log(res);
+                dispatch(followingUpdate(id));
+                dispatch(getRefresh());
+                toast.success(res.data.message);
+            } catch (error) {
+                toast.error(error.response.data.message);
+                console.log(error);
+            }
+            
+        }else{
+            // follow
+            try {
+                axios.defaults.withCredentials = true;
+                const res = await axios.post(`${USER_API_END_POINT}/follow/${id}`, {id:user?._id});
+                console.log(res);
+                dispatch(followingUpdate(id));
+                dispatch(getRefresh());
+                toast.success(res.data.message);
+            } catch (error) {
+                toast.error(error.response.data.message);
+                console.log(error);
+            }
+        }
+    }
 
     
 }
