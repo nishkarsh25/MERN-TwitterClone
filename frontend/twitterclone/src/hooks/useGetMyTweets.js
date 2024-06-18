@@ -31,5 +31,11 @@ const useGetMyTweets = (id) => {
         }
     }
 
-    
+    useEffect(() => {
+        if(isActive){
+            fetchMyTweets();
+        }else{
+            followingTweetHandler();
+        }
+    }, [isActive,refresh]);
 };
