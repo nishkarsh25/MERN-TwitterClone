@@ -56,7 +56,9 @@ const Login = () => {
   }
 
 
-  
+  const loginSignupHandler = () => {
+    setIsLogin(!isLogin);
+  }
 
   
 }
