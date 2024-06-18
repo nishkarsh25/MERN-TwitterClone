@@ -5,6 +5,6 @@ import {useDispatch} from "react-redux";
 import { getMyProfile, getOtherUsers } from "../redux/userSlice";
 
 const useOtherUsers = (id) => {
-    
+    const dispatch = useDispatch();
     
 };
