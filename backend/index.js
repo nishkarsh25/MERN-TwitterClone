@@ -5,12 +5,18 @@ import cookieParser from "cookie-parser";
 import userRoute from "./routes/userRoute.js";
 import tweetRoute from "./routes/tweetRoute.js";
 import cors from "cors";
+import path from "path";
 
 dotenv.config({
     path:".env"
 })
 databaseConnection();
 const app = express(); 
+
+
+const __dirname = path.resolve();
+console.log(__dirname);
+
 
 // middlewares
 app.use(express.urlencoded({
@@ -27,6 +33,12 @@ app.use(cors(corsOptions));
 // api
 app.use("/api/v1/user",userRoute);
 app.use("/api/v1/tweet", tweetRoute);
+
+
+app.use(express.static(path.join(__dirname, "/frontend/twitterclone/build")));
+app.get("*", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "frontend/twitterclone", "build", "index.html"));
+})
  
 
 app.listen(process.env.PORT,() => {
